@@ -157,22 +157,22 @@ export default function App() {
                 >
                   Zavřít
                 </button>
-                <div className="font-script text-3xl md:text-4xl text-pink-600 mb-6 italic">Moje nejdražší,</div>
+                <div className="font-script text-3xl md:text-4xl text-pink-600 mb-6 italic">Moje nejmilovanější,</div>
                 <div className="space-y-4 text-lg text-[#4a3a3a] leading-relaxed font-light">
                   <p>
-                    Chtěl jsem ti vytvořit něco speciálního, co ti připomene, jak moc pro mě znamenáš. 
+                    Chtěl jsem ti udělat něco speciálního, co ti připomene, jak moc pro mě znamenáš. 
                     Každý den s tebou je jako sen, ze kterého se nechci nikdy probudit.
                   </p>
                   <p>
-                    Děkuji ti za tvůj úsměv, za tvou trpělivost a za to, že jsi přesně taková, jaká jsi. 
+                    Děkuju za tvůj úsměv, za tvou trpělivost a za to, že jsi přesně taková, jaká jsi. 
                     Jsi moje největší štěstí a moje všechno.
                   </p>
                   <p>
-                    Miluji tě víc, než dokážou slova vyjádřit.
+                    Miluju tě víc, než dokážou slova vyjádřit.
                   </p>
                 </div>
                 <div className="mt-8 text-right font-script text-3xl text-pink-500">
-                  Navždy tvůj ❤️
+                  Tvůj daneček ❤️
                 </div>
               </motion.div>
             )}
@@ -180,46 +180,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Memory Gallery */}
-      <section className="py-24 bg-white/30 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl text-[#4a3a3a] mb-4 flex items-center justify-center gap-3">
-              <Camera className="text-pink-400" /> Naše vzpomínky
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {memories.map((memory, idx) => (
-              <motion.div
-                key={memory.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.2 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
-                <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-lg mb-4">
-                  <img 
-                    src={memory.img} 
-                    alt={memory.title}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
-                    <p className="font-medium text-lg">{memory.title}</p>
-                    <p className="text-sm opacity-80">{memory.date}</p>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-serif text-xl text-[#4a3a3a]">{memory.title}</h3>
-                  <p className="text-sm text-pink-400">{memory.date}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Interactive Hugs & Kisses */}
       <section className="py-24 px-4 text-center">
